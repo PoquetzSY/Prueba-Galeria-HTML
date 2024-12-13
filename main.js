@@ -1,6 +1,7 @@
 import ApiService from "./src/Service/ApiService.js";
 import Card from "./src/components/Card.js";
 import Carousel from "./src/components/Carousel.js";
+import Footer from "./src/components/Footer.js";
 
 const App = document.getElementById("app");
 
@@ -34,6 +35,7 @@ const render = () => {
                     </div>
                 `
         }
+        ${Footer()}
     `;
 };
 

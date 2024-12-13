@@ -105,7 +105,7 @@ h1 {
 }
 
 .carousel {
-  padding: 0 16px;
+    padding: 0 16px;
     display: flex;
     gap: 16px;
     width: 90%;
@@ -144,7 +144,6 @@ h1 {
     right: 10px;
 }
 
-/* Responsividad */
 @media (min-width: 1024px) {
     .carousel .card {
         max-width: calc((100% / 5) - 16px);
@@ -163,6 +162,12 @@ h1 {
     }
 }
 
+.footer {
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+    background: #584f3d;
+}
 /* Spinner */
 
 .loading {
