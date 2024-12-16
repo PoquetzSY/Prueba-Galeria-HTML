@@ -1,13 +1,31 @@
 const Card = ({ character, cardClass = "", imgClass = "", textClass = "" }) => {
-    return `
-        <div class="card ${cardClass}">
-            <img class="imageCard ${imgClass}" src="${character.image}" alt="${character.name}">
-            <div class="p-4">
-                <h2 class="${textClass} textBrownDark">${character.name}</h2>
-                <p class="${textClass} textGray">${character.species} - ${character.status}</p>
-            </div>
-        </div>
-    `;
+    const cardDiv = document.createElement("div");
+    cardDiv.className = `card ${cardClass}`;
+
+    const img = document.createElement("img");
+    img.className = `imageCard ${imgClass}`;
+    img.src = character.image;
+    img.alt = character.name;
+
+    cardDiv.appendChild(img);
+
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "p-4";
+
+    const title = document.createElement("h2");
+    title.className = `${textClass} textBrownDark`;
+    title.textContent = character.name;
+
+    const paragraph = document.createElement("p");
+    paragraph.className = `${textClass} textGray`;
+    paragraph.textContent = `${character.species} - ${character.status}`;
+
+    contentDiv.appendChild(title);
+    contentDiv.appendChild(paragraph);
+
+    cardDiv.appendChild(contentDiv);
+
+    return cardDiv;
 };
 
 export default Card;
