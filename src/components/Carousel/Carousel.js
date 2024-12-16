@@ -1,7 +1,7 @@
-import Card from "./Card.js";
+import Card from "../Card/Card.js";
 
 const Carousel = ({ characters }) => {
-    return `<div class="carousel-container">
+    return `<section class="carousel-container">
         <button class="carousel-btn prev">&lt;</button>
         <div class="carousel">
         ${characters
@@ -16,7 +16,7 @@ const Carousel = ({ characters }) => {
             .join("")}
         </div>
         <button class="carousel-btn next">&gt;</button>
-    </div>`;
+    </section>`;
 };
 
 export default Carousel;

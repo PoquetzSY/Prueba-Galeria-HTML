@@ -1,7 +1,7 @@
-import ApiService from "./src/Service/ApiService.js";
-import Card from "./src/components/Card.js";
-import Carousel from "./src/components/Carousel.js";
-import Footer from "./src/components/Footer.js";
+import ApiService from "./Service/ApiService.js";
+import Card from "./components/Card/Card.js";
+import Carousel from "./components/Carousel/Carousel.js";
+import Footer from "./components/Footer/Footer.js";
 
 const App = document.getElementById("app");
 
@@ -18,9 +18,8 @@ const render = () => {
             isLoading
                 ? `<div id="loading" class="loading">Loading&#8230;</div>`
                 : `
-                    <div>
                       ${Carousel({ characters })}
-                      <div class="grid">
+                      <section class="grid">
                       ${characters
                           .map((character) =>
                               Card({
@@ -31,8 +30,7 @@ const render = () => {
                               })
                           )
                           .join("")}
-                      </div>
-                    </div>
+                      </section>
                 `
         }
         ${Footer()}

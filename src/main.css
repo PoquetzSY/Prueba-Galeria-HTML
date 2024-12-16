@@ -1,3 +1,7 @@
+@import "/src/components/Card/Card.css";
+@import "/src/components/Carousel/Carousel.css";
+@import "/src/components/Footer/Footer.css";
+
 :root {
     --color-brown: #584f3d;
     --color-brown-darker: #3d3526;
@@ -67,24 +71,6 @@ h1 {
     }
 }
 
-.card {
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    background: var(--color-blue);
-}
-
-.card:hover {
-    background: var(--color-blue-light);
-}
-
-.imageCard {
-    object-fit: cover;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    width: 100%;
-}
-
 .gridCard {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -95,79 +81,6 @@ h1 {
     transform: translateY(-0.25rem);
 }
 
-/* Carrusel */
-
-.carousel-container {
-    margin: 32px 0;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel {
-    padding: 0 16px;
-    display: flex;
-    gap: 16px;
-    width: 90%;
-    max-width: 100vw;
-}
-
-.carouselCard {
-    flex-shrink: 0;
-    width: 200px;
-    height: 300px;
-    margin: 0 auto;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
-
-@media (min-width: 1024px) {
-    .carousel .card {
-        max-width: calc((100% / 5) - 16px);
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .carousel .card {
-        max-width: calc((100% / 3) - 16px);
-    }
-}
-
-@media (max-width: 767px) {
-    .carousel .card {
-        max-width: 90%;
-    }
-}
-
-.footer {
-    padding: 1rem;
-    text-align: center;
-    color: #ffffff;
-    background: #584f3d;
-}
 /* Spinner */
 
 .loading {
